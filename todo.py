@@ -28,9 +28,9 @@ class ToDo:
 	
 	def view_todo_list(self):
 
-		print(f'The current todo list:')
+		print(f'The current todo list:\n')
 		for key, value in self.todo_list.items():
-			print(f'\t{key} - {value}')
+			print(f'\t{key} - {value}\n')
 
 todo = ToDo()
 
