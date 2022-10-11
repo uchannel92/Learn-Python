@@ -4,45 +4,38 @@ class TextFile:
 		self.arg = arg
 
 
-	def read_text_file(self):
+	def create_file(self):
 		""" create the text file """
+		filename = input('Save Filename as: ')
+		file = f'{filename}.txt'
 
-		#hard coding the filename
-		filename = 'coldplay.txt'
+		with open(file, 'w') as file_object:
+			print(f'Filename has been saved: {file}')
 
-		with open(filename, 'r') as file_object:
+	def read_file(self):
+
+		file_to_read = input('Type the filename you want to open: ')
+		filename = f'{file_to_read}.txt'
+
+		with open(file_to_read, 'r') as file_object:
 			data = file_object.read()
 
-		print('file has been read')
-		return data
+	def append_to_file(self):
+		
+		file_to_read = input('Type the filename you want to edit: ')
+		text = input('Enter the text you want to write: ')
 
-	def display_data(self):
+		with open(file_to_read, 'a') as file_object:
+			file_object.write(text)
+			print(f'You entered: {text}')
 
-		track = self.read_text_file()
-		print(track)
 
+chen_test = TextFile()
+chen_test.create_file()
+chen_test.append_to_file()
+chen_test.read_file()
 
-new_file = TextFile()
-
-while True:
-
-	prompt = input('Enter any key to continue or press q to quit: ')
-
-	if prompt == 'q':
-		break
-
-	else:
-		pass
-
-	prompt_two = input('1) add data 2) read file: ')
-
-	if prompt_two == '1':
-		new_file.read_text_file()
-		continue
-
-	elif prompt_two == '2':
-		new_file.display_data()
-		break
+# create while loop which asks the citizen what they want to do.
 
 
 print('\nGoodbye')
