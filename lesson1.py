@@ -19,4 +19,8 @@ print(rand)
 rand_two = print_random_num()
 print(rand_two)
 
+
+print('hello')
+
 print(f"First number was: {rand} & second number is: {rand_two}")
+
