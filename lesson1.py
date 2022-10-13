@@ -15,3 +15,6 @@ def print_random_num():
 
 rand = print_random_num()
 print(rand)
+
+rand_two = print_random_num()
+print(rand_two)
