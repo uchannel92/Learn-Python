@@ -18,3 +18,5 @@ print(rand)
 
 rand_two = print_random_num()
 print(rand_two)
+
+print('hello')
